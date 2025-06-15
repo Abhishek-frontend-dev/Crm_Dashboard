@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="p-4 mx-auto bg-gradient-to-r from-orange-200 to-pink-300 dark:bg-gradient-to-r dark:from-sky-950 dark:to-fuchsia-900"
+  >
+    <div id="main">
+      <!--titel section with dark light mode  and search and filter mode-->
+      <section id="titles">
+        <div
+          class="title from-pink-300 to-purple-300 text-gray-800 bg-gradient-to-r dark:from-blue-800 dark:to-sky-900 dark:text-white sm:p-3 p-2 text-center sm:justify-between items-center sm:text-xs md:text-lg lg:text-2xl sm:flex rounded-lg"
+        >
+          <button
+            class="bg-gradient-to-tr from-cyan-300 to-cyan-600 text-gray-700 dark:text-white dark:bg-gradient-to-tr dark:from-red-700 dark:to-red-950 font-bold p-2 sm:p-3 rounded-2xl cursor-pointer hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-800 transition-all md:text-2xl sm:text-lg"
+            id="themBtn"
+          >
+            🌙 Dark Mode
+          </button>
+          <h2 class="font-bold">User Dashboard ak_creativeweb</h2>
+          <div
+            id="User"
+            class="p-2 from-emerald-500 to-purple-500 bg-gradient-to-r dark:from-blue-600 dark:to-sky-700 font-bold rounded-2xl"
+          >
+            <input
+              type="text"
+              id="search-input"
+              placeholder="🔍 search user"
+              class="bg-white rounded-xl text-orange-600 w-50"
+            />
+            <button
+              id="search-btn"
+              class="bg-gradient-to-tr from-red-700 to-red-700 font-bold sm:p-2 rounded-2xl cursor-pointer hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-800 transition-all text-lg"
+            >
+              🔍
+            </button>
+
+            <select
+              name="select-by"
+              id="select-by"
+              class="bg-pink-200 dark:bg-blue-900 p-1 sm:p-2 rounded-lg text-lg"
+            >
+              <option value="select " selected>Select By</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="hr">HR</option>
+              <option value="age:20+">Age: 20+</option>
+              <option value="age:30+">Age: 30+</option>
+              <option value="age:40+">Age: 40+</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!--titel section with dark light mode  and search and filter mode end here-->
+
+      <!--state section-->
+      <section id="state">
+        <div
+          class="from-pink-200 to-purple-400 bg-gradient-to-t dark:from-blue-800 dark:to-pink-800 sm:flex gap-4 items-center justify-between text-center text-gray-700 dark:text-white mt-4 rounded-lg font-bold"
+        >
+          <div class="p-1 sm:p-3 text-sm sm:text-xs md:text-lg lg:text-2xl">
+            <h3>Total User :<span id="total-user"> 0</span></h3>
+          </div>
+          <div class="p-1 sm:p-3 text-sm sm:text-xs md:text-lg lg:text-2xl">
+            <h3>Active User :<span id="active-user"> 0</span></h3>
+          </div>
+          <div class="p-1 sm:p-3 text-sm sm:text-xs md:text-lg lg:text-2xl">
+            <h3>Average User :<span id="average-user"> 0</span></h3>
+          </div>
+        </div>
+      </section>
+      <!--state section end here-->
+      <!--card display and from section-->
+      <section
+        id="useradn-form"
+        class="sm:block md:block lg:flex flex-row sm:flex-row-reverse justify-between text-center dark:text-white m-4 text-sm sm:text-lg font-medium text-gray-800"
+      >
+        <!--user form start here-->
+
+        <div
+          id="form"
+          class="text-start dark:text-white m-4 sm:text-lg font-medium text-gray-800"
+        >
+          <h2 class="text-lg sm:text-2xl font-bold text-center p-2">
+            User Form
+          </h2>
+          <div
+            id="form-container"
+            class="bg-gradient-to-b from-purple-200 to-pink-200 dark:from-cyan-600 dark:to-sky-800 p-3 flex flex-col sm:w-100 rounded-xl"
+          >
+            <label for="first Name" class="text-lg"> First Name </label>
+            <input
+              type="text"
+              name=""
+              id="name"
+              class="p-2 bg-white text-amber-300 font-bold"
+            />
+            <label for="first Name" class="text-lg">Last Name</label>
+            <input
+              type="text"
+              name=""
+              id="last-name"
+              class="p-2 bg-white font-bold text-amber-300"
+            />
+            <label for="email" class="text-lg">Email</label>
+            <input
+              type="email"
+              name=""
+              id="email"
+              class="p-2 bg-white font-bold text-amber-300"
+            />
+
+            <label for="email" class="text-lg">Age</label>
+            <input
+              type="number"
+              name=""
+              id="age"
+              class="p-2 bg-white font-bold text-amber-300"
+            />
+            <label for="designation" class="text-lg">Select Designation</label>
+            <select
+              name="designation"
+              id="designation"
+              class="bg-orange-100 p-2 text-amber-950 font-bold"
+            >
+              <option value="select">Select</option>
+              <option value="web-designer">Web Designer</option>
+              <option value="frontend-dev">Frontend Developer</option>
+              <option value="backend-dev">Backend Developer</option>
+            </select>
+
+            <button
+              onclick="showCard()"
+              id="create-btn"
+              class="p-3 mt-3 rounded-4xl shadow-2xl cursor-pointer text-lg font-bold bg-gradient-to-r from-orange-300 to-pink-300 dark:from-green-700 dark:to-cyan-600 active:scale-50 transition-all"
+            >
+              Create User
+            </button>
+          </div>
+        </div>
+
+        <!--user form start end here-->
+
+        <!--usern card start here-->
+        <div id="users">
+          <h2
+            class="p-2 m-2 font-bold text-sm sm:text-xs md:text-lg lg:text-2xl"
+          >
+            👥Users
+          </h2>
+
+          <div
+            id="user-container"
+            class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          ></div>
+        </div>
+        <!--usern card start end here-->
+      </section>
+      <!--card display and from section-->
+    </div>
+
+    <!-- Correct placement -->
+    <script src="script.js"></script>
+  </body>
+</html>
